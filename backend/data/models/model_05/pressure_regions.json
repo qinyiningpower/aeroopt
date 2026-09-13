@@ -1,0 +1,38 @@
+[
+  {
+    "region_id": "front",
+    "pressure_before_mean": -0.359969,
+    "pressure_after_mean": -0.234087,
+    "pressure_change": 0.125882,
+    "change_level": "high",
+    "description": "The front region shows high pressure change after optimization.",
+    "possible_effect": "Pressure change in the front region may influence the pressure drag generated at the vehicle nose."
+  },
+  {
+    "region_id": "roof",
+    "pressure_before_mean": -0.368671,
+    "pressure_after_mean": -0.281312,
+    "pressure_change": 0.087359,
+    "change_level": "medium",
+    "description": "The roof region shows medium pressure change after optimization.",
+    "possible_effect": "Pressure change over the roof may indicate a change in upper-body airflow smoothness."
+  },
+  {
+    "region_id": "side",
+    "pressure_before_mean": -0.252297,
+    "pressure_after_mean": -0.183867,
+    "pressure_change": 0.068429,
+    "change_level": "medium",
+    "description": "The side region shows medium pressure change after optimization.",
+    "possible_effect": "Pressure change on the side region may reflect redistribution of airflow along the vehicle body."
+  },
+  {
+    "region_id": "rear",
+    "pressure_before_mean": -0.19024,
+    "pressure_after_mean": -0.165551,
+    "pressure_change": 0.024689,
+    "change_level": "low",
+    "description": "The rear region shows low pressure change after optimization.",
+    "possible_effect": "Pressure change in the rear region may influence wake behavior and rear pressure drag."
+  }
+]

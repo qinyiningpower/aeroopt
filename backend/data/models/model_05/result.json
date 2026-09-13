@@ -1,0 +1,19 @@
+{
+  "case_id": "demo_case_05",
+  "case_name": "N_S_WWC_WM",
+  "drag": {
+    "before": 0.094,
+    "after": 0.0729,
+    "delta": 0.021,
+    "reduction_percent": 22.45
+  },
+  "images": {
+    "before_pressure": "images/before_pressure.png",
+    "after_pressure": "images/after_pressure.png"
+  },
+  "data": {
+    "click_map": "click_map.json",
+    "shape_regions": "shape_regions.json",
+    "pressure_regions": "pressure_regions.json"
+  }
+}
