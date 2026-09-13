@@ -1,0 +1,34 @@
+[
+  {
+    "region_id": "front",
+    "average_displacement": 0.000851,
+    "max_displacement": 0.001111,
+    "change_level": "medium",
+    "description": "The front region shows medium geometry displacement after optimization.",
+    "possible_effect": "A local geometry adjustment in the front region may affect the incoming airflow and change the pressure distribution near the vehicle nose."
+  },
+  {
+    "region_id": "roof",
+    "average_displacement": 0.000977,
+    "max_displacement": 0.001139,
+    "change_level": "high",
+    "description": "The roof region shows high geometry displacement after optimization.",
+    "possible_effect": "A roofline geometry change may affect the airflow passing over the upper body of the vehicle."
+  },
+  {
+    "region_id": "side",
+    "average_displacement": 0.000923,
+    "max_displacement": 0.001074,
+    "change_level": "low",
+    "description": "The side region shows low geometry displacement after optimization.",
+    "possible_effect": "A side-body geometry change may influence the airflow along the vehicle side surface."
+  },
+  {
+    "region_id": "rear",
+    "average_displacement": 0.000932,
+    "max_displacement": 0.001108,
+    "change_level": "medium",
+    "description": "The rear region shows medium geometry displacement after optimization.",
+    "possible_effect": "A rear geometry adjustment may affect wake formation and flow separation behind the vehicle."
+  }
+]
