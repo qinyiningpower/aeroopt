@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="config.js"></script>
+        <title>Shape Analysis</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+
+    <body class="page-one">
+
+        <a href="select.html" class="back-btn">⬅ Back</a>
+
+        <h1>Shape Analysis</h1>
+
+        <div class="analysis-container">
+
+            <div class="left">
+                <p class="subtitle">Click hotspots to analyze shape distribution</p>
+
+                <div class="car-container">
+
+                    <img id="carImg" class="car" src="images/1_after_shape.png">
+
+                    <div class="dot" data-type="front" style="top:50%; left:35%"></div>
+                    <div class="dot" data-type="roof" style="top:18%; left:55%;"></div>
+                    <div class="dot" data-type="rear" style="top:11%; left:68%;"></div>
+                    <div class="dot" data-type="side" style="top:45%; left:64%;"></div>
+                </div>
+            </div>
+
+            <div class="right right-column">
+                <h5>Shape Analysis</h5>
+
+                <div class="info-box">
+                    <div id="infoBox">Click a hotspot to see data</div>
+                    <div id="shapeInfo"></div>
+                    <div id="aiInfo">
+                        <i id="loadingText" style="display:none;">Loading...</i>
+                    </div>
+                </div>
+
+                <div class="ai-box">
+                    <h5>🤖 AI Assistant</h5>
+
+                    <div id="chatMessages" class="chat-messages"></div>
+
+                    <div class="chat-input">
+                        <input id="userInput" placeholder="Ask about shape changes......">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="shape.js"></script>
+
+    </body>
+</html>

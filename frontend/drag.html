@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="config.js"></script>
+  <title>Drag Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-one">
+
+<a href="select.html" class="back-btn">⬅ Back</a>
+
+<h1>Drag Analysis Dashboard</h1>
+
+<div class="drag-layout">
+
+
+  <div class="panel">
+    <h2>Original Result</h2>
+    <canvas id="originalGauge"></canvas>
+    <div class="info">
+      Drag: <span id="beforeDrag">-</span><br>
+    </div>
+  </div>
+
+
+  <div class="panel">
+    <h2>Optimized Result</h2>
+    <canvas id="optimizedGauge"></canvas>
+
+    <div class="info">
+      Drag: <span id="afterDrag">-</span><br>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="summary">
+  <h3>⚡ Improvement Summary</h3>
+  <p>Reduction: <span id="reduction">-</span></p>
+</div>
+
+<div class="analysis-container">
+
+
+  <div class="left">
+    <p class="subtitle">Click hotspots to analyze drag distribution</p>
+
+    <div class="car-container">
+
+      <img id="carImg" class="car" src="images/1_after_pressure.png">
+
+      <div class="dot" data-type="front" style="top:50%; left:35%"></div>
+      <div class="dot" data-type="roof" style="top:18%; left:55%;"></div>
+      <div class="dot" data-type="rear" style="top:11%; left:68%;"></div>
+      <div class="dot" data-type="side" style="top:45%; left:64%;"></div>
+    </div>
+  </div>
+
+
+  <div class="right right-column">
+
+    <h5>Drag Analysis</h5>
+
+    <div class="info-box">
+      <div id="infoBox">Click a hotspot to see data</div>
+    </div>
+
+    <div class="ai-box">
+      <h5>🤖 AI Assistant</h5>
+
+      <div id="chatMessages" class="chat-messages"></div>
+
+      <div class="chat-input">
+        <input id="userInput" placeholder="Ask about drag changes...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="drag.js"></script>
+
+<script>
+    window.onclick = function(event) {
+  const modal = document.getElementById("modal");
+
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

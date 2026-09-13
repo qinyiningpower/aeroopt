@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title>AeroOpt | Aerodynamic Case Explorer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="config.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+
+    <div class="navbar">
+
+        <div class="logo">
+            AeroOpt
+        </div>
+
+
+
+        <div class="menu">
+            <a href="index.html">Homepage</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <body class="page-one">
+        <h1>AI-Driven Optimization</h1>
+
+        <div class="box">
+            <h2>Choose a vehicle to analyze</h2>
+
+            <div class="car-grid">
+
+
+                <div class="car-card" onclick="selectCar('1'); openCarModal(
+                    ['images/1_before_shape.png',
+                    'images/1_after_shape.png',
+                    'images/1_before_pressure.png',
+                    'images/1_after_pressure.png',
+                    ], 'Car 1')">
+                    <img src="images/1_before_shape.png">
+                    <p>Car 1</p>
+                </div>
+
+                <div class="car-card" onclick="selectCar('2'); openCarModal(
+                    ['images/2_before_shape.png',
+                    'images/2_after_shape.png',
+                    'images/2_before_pressure.png',
+                    'images/2_after_pressure.png',
+                    ], 'Car 2')">
+                    <img src="images/2_before_shape.png">
+                    <p>Car 2</p>
+                </div>
+
+                <div class="car-card" onclick="selectCar('3'); openCarModal(
+                    ['images/3_before_shape.png',
+                    'images/3_after_shape.png',
+                    'images/3_before_pressure.png',
+                    'images/3_after_pressure.png',
+                    ], 'Car 3')">
+                    <img src="images/3_before_shape.png">
+                    <p>Car 3</p>
+                </div>
+
+                <div class="car-card" onclick="selectCar('4'); openCarModal(
+                    ['images/4_before_shape.png',
+                    'images/4_after_shape.png',
+                    'images/4_before_pressure.png',
+                    'images/4_after_pressure.png',
+                    ], 'Car 4')">
+                    <img src="images/4_before_shape.png">
+                    <p>Car 4</p>
+                </div>
+
+
+                <div class="car-card" onclick="selectCar('5');openCarModal(
+                    ['images/5_before_shape.png',
+                    'images/5_after_shape.png',
+                    'images/5_before_pressure.png',
+                    'images/5_after_pressure.png',
+                    ], 'Car 5')">
+                    <img src="images/5_before_shape.png">
+                    <p>Car 5</p>
+                </div>
+
+                <div class="car-card" onclick="selectCar('6');openCarModal(
+                    ['images/6_before_shape.png',
+                    'images/6_after_shape.png',
+                    'images/6_before_pressure.png',
+                    'images/6_after_pressure.png',
+                    ], 'Car 6')">
+                    <img src="images/6_before_shape.png">
+                    <p>Car 6</p>
+                </div>
+
+                <div class="car-card" onclick="selectCar('7');openCarModal(
+                    ['images/7_before_shape.png',
+                    'images/7_after_shape.png',
+                    'images/7_before_pressure.png',
+                    'images/7_after_pressure.png',
+                    ], 'Car 7')">
+                    <img src="images/7_before_shape.png">
+                    <p>Car 7</p>
+                </div>
+
+            </div>
+
+            <br>
+
+
+            <img id="preview" width="300" style="display:none; border-radius:10px;">
+
+            <br><br>
+        </div>
+
+        <div class="intro" id="about">
+
+            <div class="text">
+                <h3>About This System</h3>
+                <p>
+                This system is a web-based interactive platform that combines AI analysis, physics visualization, and modern UI design to help users understand automotive aerodynamic performance in a clear and intuitive way.
+                </p>
+
+                <p>
+                It allows users to explore different car models, visualize airflow-related data such as pressure distribution, and receive AI-generated explanations of drag and aerodynamic behavior. The system also supports interactive features like hotspot selection, model switching, and real-time AI chat assistance.
+                </p>
+            </div>
+
+
+            <div class="image">
+                <img src="images/1_after_shape.png">
+            </div>
+
+        </div>
+
+
+
+        <div id="carModal" class="modal-a">
+            <div class="modal-a-content">
+
+                <span class="close" onclick="closeModal()">&times;</span>
+
+                <h2 id="modalTitle">Car Name</h2>
+
+                <div id="modalImages" class="modal-a-images"></div>
+
+
+                <div class="modal-actions">
+                <button onclick="analyzeSelectedCar()">Analyze</button>
+                </div>
+
+            </div>
+        </div>
+    <script src="script.js"></script>
+    </body>
+
+
+</html>

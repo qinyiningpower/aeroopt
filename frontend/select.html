@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="config.js"></script>
+  <title>Select Option</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-two">
+
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<img id="carPreview" width="300">
+
+<h4>Choose Analysis Type</h4>
+
+<p class="subtitle">Select one analysis type to continue</p>
+
+<div class="container">
+
+  <div class="card" onclick="go('drag')">
+    Drag
+    <p>Measures air resistance & aerodynamic efficiency</p>
+  </div>
+
+  <div class="card" onclick="go('pressure')">
+    Pressure
+    <p>Air flow & surface distribution</p>
+  </div>
+
+  <div class="card" onclick="go('shape')">
+    Shape Change
+    <p>Analyze vehicle geometry optimization</p>
+  </div>
+
+  <div class="card" onclick="go('model')">
+    AI Interpretation
+    <p>Explain the saved pressure comparison</p>
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+window.onload = function () {
+  const carId = localStorage.getItem("selectedCar");
+
+  console.log("Loaded car:", carId);
+
+  if (carId) {
+    document.getElementById("carPreview").src =
+      `images/${carId}_after_shape.png`;
+  }
+};
+</script>
+
+</body>
+</html>

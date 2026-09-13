@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="config.js"></script>
+  <meta charset="UTF-8">
+  <title>AI Interpretation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="page-one">
+  <a href="select.html" class="back-btn">⬅ Back</a>
+
+  <h1>🧠 AI Interpretation</h1>
+
+    <div class="body2">
+  <div class="info-box3">
+  <h3>🤖 AI Analysis</h3>
+
+  <div id="aiExplanation">
+    Loading analysis...
+  </div>
+
+</div>
+
+</div>
+
+  <div class="model-layout">
+
+
+    <div class="left">
+      <div class="car-container">
+        <img id="carImg" class="car" src="images/1_after_shape.png">
+      </div>
+    </div>
+
+    <div class="right right-column">
+
+
+
+      <div class="ai-box">
+        <h3>🤖 AI Assistant</h3>
+
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask something..." />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script src="model.js"></script>
+
+</body>
+</html>
