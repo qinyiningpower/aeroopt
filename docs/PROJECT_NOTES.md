@@ -1,38 +1,35 @@
-# Project notes and interview preparation
+# My AeroOpt implementation
 
-## Ownership
+## What I built
 
-The owner confirmed their role as **Team Leader & Backend Developer**: leading the competition team and handling backend development. The supplied folder includes team application materials: a browser frontend, Flask AI service, case exports, and region-generation scripts. Individual authorship of each module has not yet been established. The separate research model is not included.
+I developed AeroOpt end to end for the MBTMY Vibathon 2026 AI Defined Vehicle competition. I built the browser frontend, Flask backend, result-processing pipeline, and AI assistant integration. I connected precomputed research outputs to interactive visualization and AI-assisted interpretation across seven vehicle cases. My separate research model is not included in this repository.
 
-## Original work represented by the supplied materials
+## Implementation
 
-- Paired geometry/pressure result processing into front, roof, side, and rear summaries.
-- A Flask interface serving cases and region summaries.
-- AI prompts grounded in case data, including specialized shape, pressure, and drag explanations.
-- A browser experience connecting vehicle selection, saved visualizations, and AI interaction.
+- I built the vehicle-selection and comparison interface for geometry, pressure, and drag results.
+- I developed the Flask APIs and case loader that serve result data to the frontend.
+- I processed paired geometry and pressure outputs into front, roof, side, and rear summaries.
+- I integrated the AI assistant with case data and specialized prompts for shape, pressure, and drag explanations.
+- I connected the frontend, backend, and AI workflow so that users can inspect results and ask case-specific questions.
 
-## Publication improvements
+## Engineering details
 
-This portfolio edition adds same-origin hosting, configurable credentials, a no-key browsing path, request-local case handling, safer AI text rendering, input checks, a configurable postprocessing CLI, automated checks, and English documentation. These changes were made while preparing the repository for publication and should not be described as historical competition deliverables.
+The application uses same-origin hosting, configurable credentials, browsing without an API key, request-scoped case selection, input validation, and safe text rendering. A configurable postprocessing CLI converts paired VTP meshes into regional JSON summaries. Automated checks cover the API and case artifacts.
 
-## Resume wording
+## Project introduction
 
-The confirmed role is Team Leader & Backend Developer. The following wording keeps leadership and technical responsibilities distinct:
+> **AeroOpt — Automotive Aerodynamics Analysis and AI Assistant**
+> I built an end-to-end vehicle aerodynamics prototype for MBTMY Vibathon 2026, integrating a browser frontend, Flask APIs, regional geometry and pressure processing, and an AI assistant. I connected seven precomputed vehicle cases to interactive comparisons and case-grounded explanations.
 
-> **AeroOpt — MBTMY Vibathon 2026, AI Defined Vehicle | Team Leader & Backend Developer**
-> Led the competition team and developed the backend integration for a vehicle aerodynamics prototype, connecting precomputed research outputs to interactive visualization and AI-assisted interpretation. Structured regional geometry and pressure summaries for a Flask API supporting seven vehicle case exports.
+## My technical walkthrough
 
-Do not add awards, deployment scale, response-time gains, model accuracy, or validated drag-reduction percentages without evidence. Do not describe all frontend or AI code as your sole work.
+1. **Problem:** I wanted to make research model outputs easier to inspect, compare, and interpret.
+2. **Architecture:** I separated expensive scientific computation from the application, which consumes lightweight saved results.
+3. **Data flow:** I summarize paired meshes into regions, expose the results through Flask, and display comparisons with optional AI interpretation.
+4. **Tradeoff:** I use precomputed cases so the application can run without a GPU, with exploration limited to saved scenarios.
+5. **Reliability:** Explicit case IDs keep requests isolated; recorded results remain available without an AI API key.
+6. **Scientific scope:** The exported demo values and AI explanations do not substitute for a reproducible model evaluation or CFD validation.
 
-## Interview walkthrough
+## External research and data
 
-1. **Problem:** research model outputs are difficult to inspect directly; an engineer needs a clear way to compare cases and ask focused questions.
-2. **Boundary:** expensive scientific computation runs separately; the application consumes a stable, lightweight result contract.
-3. **Implementation:** paired meshes are summarized into regions, loaded by Flask, and rendered as comparative views with optional AI interpretation.
-4. **Tradeoff:** precomputed cases make the application easy to run without a GPU, while limiting it to saved scenarios.
-5. **Reliability:** explicit request case IDs prevent cross-user state leakage; no API key is needed for recorded results.
-6. **Scientific limits:** rounded export values and AI explanations cannot substitute for a reproducible evaluation or CFD validation.
-
-## Information to complete later
-
-The owner confirmed that `Vibathon26AIDVStudentGuide.pdf` is the slide deck distributed for the competition. It identifies Mercedes-Benz Tech Malaysia, MBTMY Vibathon 2026, and the AI Defined Vehicle category. The deck is used as background evidence and is not included in the repository. Exact event dates, team attribution, repository-specific authorship, research model architecture/paper link, and the dataset DOI/sample mapping should be added when confirmed by the owner. These omissions do not prevent demonstrating the application but limit historical and scientific claims.
+I keep the research model separate from this application. I use the DrivAerNet collection hosted on Harvard Dataverse; the exact release, dataset DOI, and sample mapping remain to be documented. The competition guide is background material and is not distributed in this repository.
