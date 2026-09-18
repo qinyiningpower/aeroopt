@@ -1,0 +1,13 @@
+AeroOpt — competition project portfolio
+
+I developed the AeroOpt application, including its frontend, backend, result-processing pipeline, and AI integration. This repository contains my application code and dataset-derived demonstration artifacts. It is not an official Mercedes-Benz product and implies no endorsement.
+
+No blanket license is granted for the combined repository. Third-party libraries and dataset-derived assets retain their applicable upstream rights and terms.
+
+I used the DrivAerNet collection on Harvard Dataverse as my dataset source: https://dataverse.harvard.edu/dataverse/DrivAerNet . The exact release, DOI, and sample mapping remain to be documented. Dataset-derived images and summaries retain applicable upstream terms; their inclusion does not grant independent commercial reuse rights.
+
+Upstream reference: https://github.com/Mohamedelrefaie/DrivAerNet
+DrivAerNet++ authors: Mohamed Elrefaie, Florin Morar, Angela Dai, Faez Ahmed.
+The upstream project identifies the dataset license as CC BY-NC 4.0.
+
+Large model weights, raw dataset files, credentials, registration forms, and competition guide documents are intentionally excluded.
