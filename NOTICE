@@ -1,13 +1,32 @@
 AeroOpt — competition project portfolio
 
-This repository contains source and derived demonstration artifacts supplied by the project owner. It is not an official Mercedes-Benz product and implies no endorsement.
+Copyright (c) 2026 qinyiningpower.
 
-No blanket license is granted for the combined repository. Original authors retain their rights. Team contributions and third-party assets must not be relicensed as solely authored work.
+The original software and documentation in this repository are licensed under
+the MIT License. See LICENSE.
 
-The project owner confirmed the DrivAerNet collection on Harvard Dataverse as the dataset source: https://dataverse.harvard.edu/dataverse/DrivAerNet . The exact release, DOI, and sample mapping remain to be documented. Dataset-derived images and summaries retain applicable upstream terms; their inclusion does not grant independent commercial reuse rights.
+This repository is not an official Mercedes-Benz product and implies no
+endorsement. Mercedes-Benz and related marks remain the property of their
+respective owners.
 
-Upstream reference: https://github.com/Mohamedelrefaie/DrivAerNet
+Third-party datasets and dataset-derived materials are not relicensed by the
+MIT License and remain subject to their applicable upstream terms.
+
+The project owner confirmed the DrivAerNet collection on Harvard Dataverse as
+the dataset source:
+https://dataverse.harvard.edu/dataverse/DrivAerNet
+
+Upstream reference:
+https://github.com/Mohamedelrefaie/DrivAerNet
+
 DrivAerNet++ authors: Mohamed Elrefaie, Florin Morar, Angela Dai, Faez Ahmed.
-The upstream project identifies the dataset license as CC BY-NC 4.0.
 
-Large model weights, raw dataset files, credentials, registration forms, and competition guide documents are intentionally excluded.
+The upstream project identifies the dataset license as CC BY-NC 4.0:
+https://creativecommons.org/licenses/by-nc/4.0/
+
+Dataset-derived images and summaries in this repository retain applicable
+upstream attribution and use restrictions. Their inclusion does not grant
+independent commercial reuse rights beyond the upstream license.
+
+Large model weights, raw dataset files, credentials, registration forms, and
+competition guide documents are intentionally excluded.

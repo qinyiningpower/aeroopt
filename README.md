@@ -2,6 +2,8 @@
 
 **From aerodynamic model outputs to interactive engineering insight.**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 AeroOpt is a research prototype developed for **Mercedes-Benz Tech Malaysia — MBTMY Vibathon 2026**, in the **AI Defined Vehicle** category. It brings precomputed vehicle geometry, pressure fields, drag results, and an AI assistant into one browser workflow. This repository publishes the application and result-processing layer; the research model used upstream is maintained separately.
 
 ![AeroOpt vehicle comparison](frontend/images/1_after_shape.png)
@@ -64,14 +66,14 @@ The application separates scientific computation from presentation. Each request
 backend/              Flask service, prompts, case loader, precomputed cases
 frontend/             Vehicle selection, comparisons, analysis, and chat
 pipeline/             VTP-to-region JSON processing
-tests/               API and artifact consistency checks
-docs/                API contract, data provenance, model integration, interview notes
-.github/workflows/    Automated verification
+tests/                API and artifact consistency checks
+docs/                 API contract, data provenance, model integration, interview notes
+.github/workflows/     Automated verification
 ```
 
 ## Engineering focus and contribution
 
-**Role: Team Leader & Backend Developer.** The project owner led the competition team and was responsible for backend development. This portfolio highlights the backend-facing result pipeline, application interfaces, and integration boundary connecting research outputs to the frontend and AI assistant. The frontend and assistant source were supplied as part of the competition project; this repository does not claim sole authorship of every component.
+**Role: Team Leader & Backend Developer.** The project owner led the competition team and was responsible for backend development. This portfolio highlights the backend-facing result pipeline, application interfaces, and integration boundary connecting research outputs to the frontend and AI assistant.
 
 This publication edition adds portable startup, request-scoped case selection, input validation, secret exclusion, safer text rendering, automated checks, and English documentation. These release improvements are distinguished from the original competition work in [the project notes](docs/PROJECT_NOTES.md).
 
@@ -102,6 +104,14 @@ Tests cover case isolation, invalid requests, AI-disabled behavior, mocked AI re
 
 ## Attribution and use
 
-This is a competition portfolio prototype, not an official Mercedes-Benz product or an endorsed engineering tool. The project owner confirmed the [DrivAerNet collection on Harvard Dataverse](https://dataverse.harvard.edu/dataverse/DrivAerNet) as the dataset source. The exact release and per-case mapping remain to be documented. See [data provenance](docs/DATA_PROVENANCE.md).
+This is a competition portfolio prototype, not an official Mercedes-Benz product or an endorsed engineering tool.
 
-No blanket software license is granted in this release because the supplied materials include team contributions and dataset-derived assets. Third-party rights remain with their respective owners. See [NOTICE](NOTICE).
+The **original software and documentation in this repository are licensed under the MIT License**. Third-party datasets, trademarks, and dataset-derived materials remain subject to their respective upstream terms and are not relicensed by the MIT License.
+
+The project owner confirmed the [DrivAerNet collection on Harvard Dataverse](https://dataverse.harvard.edu/dataverse/DrivAerNet) as the dataset source. The exact release and per-case mapping remain to be documented. See [data provenance](docs/DATA_PROVENANCE.md) and [NOTICE](NOTICE).
+
+## License
+
+Original software and documentation: **MIT License** — see [LICENSE](LICENSE).
+
+Third-party and dataset-derived materials: see [NOTICE](NOTICE) for attribution and applicable upstream terms.
